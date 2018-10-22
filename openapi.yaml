@@ -3234,7 +3234,7 @@ paths:
       security:
       - personalAccessToken: []
       - oauth:
-        - linode:read_write
+        - linodes:read_write
       responses:
         '200':
           description: Backup service was cancelled for the specified Linode.
@@ -5108,7 +5108,7 @@ paths:
       security:
       - personalAccessToken: []
       - oauth:
-        - linodes_read_only
+        - linodes:read_only
       responses:
         '200':
           description: The Linode's statistics for the requested period.
@@ -5146,7 +5146,7 @@ paths:
       security:
       - personalAccessToken: []
       - oauth:
-        - linodes:read
+        - linodes:read_only
       responses:
         '200':
           description: >
@@ -7687,7 +7687,7 @@ paths:
       operationId: updateNodeBalancerConfig
       x-linode-cli-action: config-update
       security:
-      - personlAccessToken: []
+      - personalAccessToken: []
       - oauth:
         - nodebalancers:read_write
       requestBody:
@@ -10169,6 +10169,7 @@ components:
             'images:read_write': Allows access to all endpoints related to your Images.
             'ips:read_only': Allows access to GET your ips.
             'ips:read_write': Allows access to all endpoints related to your ips.
+            'linodes:create': Description required.
             'linodes:read_only': Allows access to GET Linodes on your Account.
             'linodes:read_write': Allow access to all endpoints related to your Linodes.
             'longview:read_only': Allows access to GET your Longview Clients.
